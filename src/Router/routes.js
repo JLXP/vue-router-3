@@ -1,9 +1,19 @@
+import Contact from "@/components/Home/Contact.vue";
+import HomePage from "@/components/Home/HomePage.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
-    history: createWebHistory(),
-    router:[{}]
+  history: createWebHistory(),
+  routes: [
+    {
+      path: "/",
+      component: HomePage,
+    },
+    {
+      path: "/contact",
+      component: Contact,
+    },
+  ],
 });
-
 
 export default router;
