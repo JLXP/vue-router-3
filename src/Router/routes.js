@@ -71,7 +71,7 @@ const router = createRouter({
       component: NotFound,
     },
   ],
-  linkActiveClass:"active"
+  linkActiveClass:"active btn btn-primary"
 });
 
 router.beforeEach((to, from) => {
