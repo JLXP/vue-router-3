@@ -38,7 +38,7 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <a class ="nav-link" aria-label="true">Login</a>
+          <router-link class ="nav-link" aria-label="true" to="/login">Login</router-link>
         </form>
       </div>
     </div>

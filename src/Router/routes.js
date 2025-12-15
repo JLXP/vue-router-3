@@ -1,3 +1,4 @@
+import Login from "@/components/Authentication/Login.vue";
 import Contact from "@/components/Home/Contact.vue";
 import HomePage from "@/components/Home/HomePage.vue";
 import NotFound from "@/components/Layout/NotFound.vue";
@@ -26,6 +27,11 @@ const router = createRouter({
       component: ProductList,
     },
     {
+      path: "/login",
+      component: Login,
+      name:"login"
+    },
+    {
       path: "/product/:productId/:categoryId?",
       component: ProductDetail,
     },
@@ -37,9 +43,16 @@ const router = createRouter({
     },
     {
       path: "/:catchAll(.*)",
-      component: NotFound
+      component: NotFound,
     },
   ],
 });
+
+
+router.beforeEach((to,from)=>{
+  console.log("Global Before Each");
+  console.log(to, from);
+  return true;
+})
 
 export default router;
