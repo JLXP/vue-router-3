@@ -12,6 +12,7 @@ const router = createRouter({
     {
       path: "/",
       component: HomePage,
+      name: "Home",
     },
     {
       path: "/contact-us",
@@ -29,7 +30,7 @@ const router = createRouter({
     {
       path: "/login",
       component: Login,
-      name:"login"
+      name: "login",
     },
     {
       path: "/product/:productId/:categoryId?",
@@ -48,11 +49,18 @@ const router = createRouter({
   ],
 });
 
-
-router.beforeEach((to,from)=>{
+router.beforeEach((to, from) => {
   console.log("Global Before Each");
   console.log(to, from);
+
+  //Check if user is authenticated
+  //if not redirect to login page
+  const isAuthenticated = true;
+  if (!isAuthenticated && to.name !== "login") {
+    return { name: "login" };
+  }
+
   return true;
-})
+});
 
 export default router;
