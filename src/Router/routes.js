@@ -14,6 +14,7 @@ const router = createRouter({
     {
       path: "/contact",
       component: Contact,
+      name: "contact"
     },
     {
         path:'/productList',
