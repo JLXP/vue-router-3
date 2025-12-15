@@ -16,7 +16,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link class="nav-link active" aria-current="page" to="#">Home</router-link>
+            <router-link class="nav-link active" aria-current="page" to="/">Home</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/contact">Contact Us</router-link>
@@ -32,8 +32,8 @@
               Product
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Product List</a></li>
-              <li><a class="dropdown-item" href="#">Product Detail</a></li>
+              <li><router-link class="dropdown-item" to="/productList">Product List</router-link></li>
+              <li><router-link class="dropdown-item" to="#">Product Detail</router-link></li>
             </ul>
           </li>
         </ul>
