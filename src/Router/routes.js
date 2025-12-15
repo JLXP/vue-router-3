@@ -71,6 +71,7 @@ const router = createRouter({
       component: NotFound,
     },
   ],
+  linkActiveClass:"active"
 });
 
 router.beforeEach((to, from) => {
