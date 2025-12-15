@@ -12,7 +12,7 @@ const router = createRouter({
       component: HomePage,
     },
     {
-      path: "/contact",
+      path: "/contact-us",
       component: Contact,
       name: "contact"
     },
@@ -26,7 +26,9 @@ const router = createRouter({
     },
     {
         path: "/product",
-        component: ProductDetail
+        component: ProductDetail,
+        name:"productDetails",
+        props:true
     }
   ],
 });
